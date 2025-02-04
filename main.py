@@ -35,13 +35,14 @@ class Arbol:
             self._imprimir_recursivo(nodo.izquierda, prefijo + ("|   " if esIzquierda else "    "), True)
             self._imprimir_recursivo(nodo.derecha, prefijo + ("|   " if esIzquierda else "    "), False)
 
+# Crear el árbol
 arbol = Arbol()
-arbol.insertar(50)
-arbol.insertar(30)
-arbol.insertar(70)
-arbol.insertar(20)
-arbol.insertar(40)
-arbol.insertar(60)
-arbol.insertar(80)
 
+# Permitir que el usuario ingrese números
+numeros = input("Ingrese los números separados por espacios: ")
+for num in map(int, numeros.split()):
+    arbol.insertar(num)
+
+# Imprimir el árbol
+print("\nÁrbol binario de búsqueda:")
 arbol.imprimirArbol()
