@@ -1,16 +1,19 @@
 # Presentacion
 En este repositorio se encuetran las tareas, trabajos y avances de la clase Inteligencia Artificial
+
 Autores:
-Camberos Bustamante Johanna Lucia
-Alvarez Cota Kevin
+
+ - Camberos Bustamante Johanna Lucia
+ - Alvarez Cota Kevin
 
 Maestro:
 ZURIEL DATHAN MORA FELIX
 
 Trabajos:
-    Arbol binario - Examen diagnostico y ajustes
-    Investigacion - Historia de la IA
-    Investigacion - Agentes Deliverativos
+
+  -  Arbol binario - Examen diagnostico y ajustes
+  -  Investigacion - Historia de la IA
+  -  Investigacion - Agentes Deliverativos
 
 
 # arbol
