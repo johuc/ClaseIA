@@ -1,4 +1,4 @@
-#Presentacion
+# Presentacion
 En este repositorio se encuetran las tareas, trabajos y avances de la clase Inteligencia Artificial
 Autores:
 Camberos Bustamante Johanna Lucia
