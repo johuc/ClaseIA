@@ -1,0 +1,6 @@
+remitente,asunto,contenido,enlaces,archivos_adjuntos,etiqueta
+"SPAM1@mail.com","Gana dinero rapido","Ingresa para ganar 1000 dolares","http://spamlink.com","Falsaimage.jpg","spam"
+"amigo@mail.com","Invitacion de cumpleaños","Te invito a mi fiesta de cumpleaños","http://Direccion.com","ImagenInvitacion.jpg","not_spam"
+"SPAM2@mail.com","No te pierdas esta oportunidad","Haz sido seleccionado para ganar un Iphone, solo ingresa ya!","http://spamIphone.com","","spam"
+"boss@mail.com","Junta","Te recuerdo la junta importante a las 8 am de mañana",""","","not_spam"
+
