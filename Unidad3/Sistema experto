@@ -1,0 +1,98 @@
+# diagnósticos y tratamientos
+diagnosticos = {
+    "HI": {
+        "nombre": "Hipertensión intracraneal",
+        "tratamiento": "Reposo, control de presión craneal, medicamentos diuréticos y evaluación neurológica."
+    },
+    "DE": {
+        "nombre": "Demencia",
+        "tratamiento": "Terapias cognitivas, medicamentos para mejorar la memoria, y seguimiento médico continuo."
+    },
+    "PK": {
+        "nombre": "Parkinson",
+        "tratamiento": "Terapias físicas, medicamentos dopaminérgicos y atención neurológica regular."
+    },
+    "EM": {
+        "nombre": "Esclerosis múltiple",
+        "tratamiento": "Medicamentos inmunosupresores, fisioterapia, y seguimiento neurológico constante."
+    },
+    "CNH": {
+        "nombre": "Compresión nerviosa o hernia",
+        "tratamiento": "Reposo, fisioterapia, analgésicos y posible intervención quirúrgica."
+    },
+    "EP": {
+        "nombre": "Epilepsia",
+        "tratamiento": "Medicamentos anticonvulsivos, control de estrés y seguimiento por neurólogo."
+    },
+    "MG": {
+        "nombre": "Meningitis",
+        "tratamiento": "Antibióticos intravenosos, hospitalización y seguimiento urgente."
+    }
+}
+
+# Lista de síntomas disponibles
+sintomas_disponibles = {
+    "DC": "Dolor de cabeza",
+    "VO": "Vómitos",
+    "PM": "Pérdida de memoria",
+    "CN": "Confusión",
+    "TR": "Temblores en reposo",
+    "RM": "Rigidez muscular",
+    "PSE": "Pérdida de sensibilidad en extremidades",
+    "VD": "Visión doble",
+    "DPE": "Dolor en piernas y espalda",
+    "CV": "Convulsiones",
+    "FI": "Fiebre",
+    "RC": "Rigidez en el cuello"
+}
+
+# Función de diagnóstico basada en las reglas
+def diagnosticar(sintomas):
+    if "DC" in sintomas and "VO" in sintomas:
+        return "HI"
+    if "PM" in sintomas and "CN" in sintomas:
+        return "DE"
+    if "TR" in sintomas and "RM" in sintomas:
+        return "PK"
+    if "PSE" in sintomas and "VD" in sintomas:
+        return "EM"
+    if "DPE" in sintomas:
+        return "CNH"
+    if "CV" in sintomas:
+        return "EP"
+    if "FI" in sintomas and "RC" in sintomas:
+        return "MG"
+    return None
+
+# Función principal
+def main():
+    print("=== Sistema Experto: Diagnóstico Neurológico ===\n")
+
+    while True:
+        print("\nSeleccione los síntomas presentes (escriba los códigos separados por comas):\n")
+        for codigo, descripcion in sintomas_disponibles.items():
+            print(f"{codigo}: {descripcion}")
+
+        entrada = input("\nIngrese los códigos de los síntomas (ejemplo: DC,VO,PM): ").upper()
+        seleccionados = [s.strip() for s in entrada.split(",") if s.strip() in sintomas_disponibles]
+
+        if not seleccionados:
+            print("\nNo se reconocieron síntomas válidos.")
+        else:
+            diagnostico_codigo = diagnosticar(seleccionados)
+            print("\n--- Resultado del Diagnóstico ---")
+            if diagnostico_codigo:
+                info = diagnosticos[diagnostico_codigo]
+                print(f"Diagnóstico: {info['nombre']}")
+                print(f"Tratamiento sugerido: {info['tratamiento']}")
+            else:
+                print("No se ha identificado un trastorno específico con los síntomas seleccionados.")
+                print("Se recomienda consultar a un especialista.")
+
+        continuar = input("\n¿Desea realizar otro diagnóstico? (s/n): ").strip().lower()
+        if continuar != 's':
+            print("\nGracias por usar el sistema experto. ¡Hasta pronto!")
+            break
+
+if __name__ == "__main__":
+    main()
