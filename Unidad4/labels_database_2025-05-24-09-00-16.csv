@@ -1,0 +1,10 @@
+label_name,bbox_x,bbox_y,bbox_width,bbox_height,image_name,image_width,image_height
+enojado,362,118,234,223,enojada1.jpg,640,479
+enojado,404,156,174,204,enojado2.jpg,849,565
+enojado,125,49,116,125,enojado3.jpeg,357,200
+feliz,250,554,680,729,feliz1.jpg,1200,1600
+feliz,319,111,270,300,feliz2.jpg,880,495
+feliz,134,69,115,128,feliz3.webp,390,280
+triste,448,476,472,478,triste1.jpg,1300,1297
+triste,153,293,523,708,triste2.jpg,870,1300
+triste,530,166,552,609,triste3.jpg,1600,1274
